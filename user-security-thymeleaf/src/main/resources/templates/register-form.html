@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://wwww.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Register Page</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body>
+		<div class='bg-gray-800'>
+	            <div class='h-16 px-8 flex items-center justify-center'>
+	                <p class='text-white font-bold text-xl'>
+	                    User Management
+	                </p>
+	            </div>
+	        </div>
+	        
+	        <div class="border-b bg-white shadow container mx-auto w-1/2 mt-20">
+	        	<form action="" th:action="@{/register}" th:object="${user}" method="POST" class="px-8 py-4">
+	        		<div class="flex justify-center mb-4">
+		        		<h1 class="text-2xl font-semibold">Please Register</h1>
+		        	</div>
+		        	<div class="items-center justify-center h-14 w-full">
+	        			<label for="username" class="text-xl block">First Name</label>
+	        			<input th:field="*{firstName}" id="username" name="username" class="h-10 w-2/3 border border-gray-200 focus:outline-none mt-2 px-2 py-2 rounded-full" type="text" placeholder="Enter First Name"/>
+	        		</div>
+	        		<div class="items-center justify-center h-14 w-full mt-8">
+	        			<label for="username" class="text-xl block">Last Name</label>
+	        			<input th:field="*{lastName}" id="username" name="username" class="h-10 w-2/3 border border-gray-200 focus:outline-none mt-2 px-2 py-2 rounded-full" type="text" placeholder="Enter Last Name"/>
+	        		</div>
+	        		<div class="items-center justify-center h-14 w-full mt-8">
+	        			<label for="username" class="text-xl block">Username</label>
+	        			<input th:field="*{username}" id="username" name="username" class="h-10 w-2/3 border border-gray-200 focus:outline-none mt-2 px-2 py-2 rounded-full" type="text" placeholder="Enter Username"/>
+	        		</div>
+	        		<div class="items-center justify-center h-14 w-full mt-8">
+	        			<label for="password" class="text-xl block">Password</label>
+	        			<input th:field="*{password}" id="password" name="password" class="h-10 w-2/3 border border-gray-200 focus:outline-none mt-2 px-2 py-2 rounded-full" type="password" placeholder="Enter Password"/>
+	        		</div>
+	        		<div class="items-center justify-center h-14 w-full my-8">
+	        			<label for="username" class="text-xl block">Email</label>
+	        			<input th:field="*{email}" id="username" name="username" class="h-10 w-2/3 border border-gray-200 focus:outline-none mt-2 px-2 py-2 rounded-full" type="text" placeholder="Enter Email"/>
+	        		</div>
+	        		<div class="mt-6">
+	        			<button type="submit" class="rounded-full bg-green-300 text-white py-2 px-6 mr-8">Register</button>
+	        			<button type="button" class="rounded-full bg-red-300 text-white py-2 px-6 btn-back">Back</button>
+	        		</div>
+	        	</form>
+	        </div>
+				
+			<script type="text/javascript">
+				const register = document.querySelector(".btn-back");
+				
+				register.addEventListener("click", (event) => {
+					event.preventDefault();
+					window.location.href = "/authenticate"
+				})
+			</script>
+	</body>
+</html>

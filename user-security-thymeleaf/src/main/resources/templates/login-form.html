@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://wwww.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Login Page</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body>
+		<div class='bg-gray-800'>
+            <div class='h-16 px-8 flex items-center justify-center'>
+                <p class='text-white font-bold text-xl'>
+                    User Management
+                </p>
+            </div>
+        </div>
+        
+        <div class="border-b bg-white shadow container mx-auto w-1/2 mt-20">
+        	<form action="" method="POST" class="px-8 py-4">
+        		<div class="flex justify-center mb-4">
+	        		<h1 class="text-2xl font-semibold">Please Login</h1>
+	        	</div>
+	        	<!-- use param.error assuming FormLoginConfigurer#failureUrl contains the query parameter error -->
+				<div th:if="${param.error != null}" class="text-xl rounded-xl bg-red-200 my-2 px-6 py-2 text-white" role="alert">
+					Failed to login.
+					<div th:if="${SPRING_SECURITY_LAST_EXCEPTION != null}">
+						Reason: <span th:text="${SPRING_SECURITY_LAST_EXCEPTION.message}"></span>
+					</div>
+				</div>
+				<!-- the configured LogoutConfigurer#logoutSuccessUrl is /login?logout and contains the query param logout -->
+				<div th:if="${param.logout != null}" class="text-xl rounded-xl bg-green-200 my-2 px-6 py-2 text-white">
+					You have been logged out.
+				</div>
+        		<div class="items-center justify-center h-14 w-full">
+        			<label for="username" class="text-xl block">Username</label>
+        			<input id="username" name="username" class="h-10 w-2/3 border border-gray-200 focus:outline-none mt-2 px-2 py-2 rounded-full" type="text" placeholder="Enter Username"/>
+        		</div>
+        		<div class="items-center justify-center h-14 w-full my-12">
+        			<label for="password" class="text-xl block">Password</label>
+        			<input id="password" name="password" class="h-10 w-2/3 border border-gray-200 focus:outline-none mt-2 px-2 py-2 rounded-full" type="password" placeholder="Enter Password"/>
+        		</div>
+        		<div>
+        			<button type="submit" class="rounded-full bg-green-300 text-white py-2 px-6 mr-8">Login</button>
+        			<button type="button" class="rounded-full bg-gray-600 text-white py-2 px-6 btn-register">Register</button>
+        		</div>
+        	</form>
+        </div>
+			
+		<script type="text/javascript">
+			const register = document.querySelector(".btn-register");
+			
+			register.addEventListener("click", (event) => {
+				event.preventDefault();
+				window.location.href = "/register"
+			})
+		</script>
+	</body>
+</html>
