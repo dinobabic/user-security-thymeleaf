@@ -8,7 +8,7 @@ I have build this application to get to know with thymeleaf and also to improve 
 <img src="https://user-images.githubusercontent.com/70106587/221555905-08605e49-cda2-4d85-96ed-3e0809b1ac9a.png"/>
 
 <h2>Register View</h2>
-![Snimka zaslona (32)](https://user-images.githubusercontent.com/70106587/221556037-4900d833-2a86-459a-b6f4-a7fe71cbb5ae.png)
+<img src="https://user-images.githubusercontent.com/70106587/221556037-4900d833-2a86-459a-b6f4-a7fe71cbb5ae.png"/>
 
 <h2>User Dashboard</h2>
 ![Uploading Snimka zaslona (33).png…]()
