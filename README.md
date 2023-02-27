@@ -14,7 +14,7 @@ I have build this application to get to know with thymeleaf and also to improve 
 <img src="https://user-images.githubusercontent.com/70106587/221556335-6e795946-3cd8-4944-b2dd-98631ecec310.png"/>
 
 <h2>Employee Dashboard</h2>
-<img src="https://user-images.githubusercontent.com/70106587/221556348-09a126f7-ca46-402c-bca8-711fa7a33777.png"/>
+<img src="https://user-images.githubusercontent.com/70106587/221556086-99d95eed-44b1-4e9a-87dd-c777a72e662b.png"/>
 
 <h2>Admin Dashboard</h2>
-<img src="https://user-images.githubusercontent.com/70106587/221556086-99d95eed-44b1-4e9a-87dd-c777a72e662b.png"/>
+<img src="https://user-images.githubusercontent.com/70106587/221556348-09a126f7-ca46-402c-bca8-711fa7a33777.png"/>
